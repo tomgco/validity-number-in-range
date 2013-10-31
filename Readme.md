@@ -1,10 +1,12 @@
 # validity-number-in-range
 
+[![Build Status](https://travis-ci.org/bengourley/validity-number-in-range.png?branch=master)](https://travis-ci.org/bengourley/validity-number-in-range)
+
 Validity style validator to ensure a property is numeric and within an upper and lower bound.
 
 ## Installation
 
-      npm install validity-number-in-range
+    npm install validity-number-in-range
 
 ## Usage
 
