@@ -1,13 +1,13 @@
 {
   "name": "validity-number-in-range",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Validity style validator to ensure a property is numeric and within an upper and lower bound",
   "main": "validator.js",
   "directories": {
     "test": "test"
   },
   "publishConfig": {
-    "registry":"http://registry.npmjs.org"
+    "registry": "http://registry.npmjs.org"
   },
   "scripts": {
     "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- -R spec"
