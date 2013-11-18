@@ -61,4 +61,12 @@ describe('Number in range validator', function () {
     })
   })
 
+  it('should allow null', function (done) {
+    createValidator(undefined, 16)('age', 'age', { age: null }, function (err, message) {
+      assert(!err)
+      assert(!message)
+      done()
+    })
+  })
+
 })

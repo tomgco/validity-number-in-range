@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bengourley/validity-number-in-range.png?branch=master)](https://travis-ci.org/bengourley/validity-number-in-range)
 
-Validity style validator to ensure a property is numeric and within an upper and lower bound.
+Validity style validator to ensure a property is numeric and within an upper and lower bound. `null` is allowed – use in conjunction with `validity.required` if this property must exist.
 
 ## Installation
 
