@@ -16,6 +16,9 @@ function createValidator(min, max) {
     // num is not a number
     if (typeof num !== 'number') return cb(null, keyDisplayName + ' must be a number')
 
+    // num must be equal to min and max
+    if ((max === min) && max !== num) return cb(null, keyDisplayName + ' must be ' + min)
+
     // num is less than `min`
     if (num < min) return cb(null, keyDisplayName + ' must be at least ' + min)
 
