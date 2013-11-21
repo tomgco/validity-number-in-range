@@ -61,6 +61,22 @@ describe('Number in range validator', function () {
     })
   })
 
+  it('should allow max and min length to be the same and give a adequate error message', function (done) {
+    createValidator(15, 15)('age', 'age', { age: 7 }, function (err, message) {
+      assert(!err)
+      assert.equal(message, 'age must be 15')
+      done()
+    })
+  })
+
+  it('should allow max and min length to be the same and validate', function (done) {
+    createValidator(15, 15)('age', 'age', { age: 15 }, function (err, message) {
+      assert(!err)
+      assert(!message)
+      done()
+    })
+  })
+
   it('should allow null', function (done) {
     createValidator(undefined, 16)('age', 'age', { age: null }, function (err, message) {
       assert(!err)
