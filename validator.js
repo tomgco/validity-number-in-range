@@ -14,7 +14,7 @@ function createValidator(min, max) {
     if (num === null) return cb(null)
 
     // num is not a number
-    if (typeof num !== 'number') return cb(null, keyDisplayName + ' must be a number')
+    if (isNaN(parseInt(num, 10))) return cb(null, keyDisplayName + ' must be a number')
 
     // num is less than `min`
     if (num < min) return cb(null, keyDisplayName + ' must be at least ' + min)

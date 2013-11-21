@@ -12,6 +12,14 @@ describe('Number in range validator', function () {
     })
   })
 
+  it('shouldn\'t callback with an error message if the input is a number within a string', function (done) {
+    createValidator(16)('age', 'age', { age: '16' }, function (err, message) {
+      assert(!message)
+      assert(!err)
+      done()
+    })
+  })
+
   it('should callback with an error message if the input is a number lower than the minimum', function (done) {
     createValidator(16)('age', 'age', { age: 15 }, function (err, message) {
       assert.equal('age must be at least 16', message)
